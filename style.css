@@ -1,0 +1,648 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Suburbia";
+  src: url(./custom_font/XenophobiaNominal-RAxA.ttf);
+}
+@font-face {
+  font-family: "Osake";
+  src: url(./custom_font/osake.regular.ttf);
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+.Parallax-1 {
+  background: url("./assets/sky.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.moon {
+  background: url("./assets/moon.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(0px);
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+}
+
+.zenitsu {
+  position: relative;
+  z-index: 2;
+}
+
+.zenitsu img {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+
+.zenitsu h1 {
+  padding-top: 3rem;
+  color: rgba(245, 245, 245, 0.267);
+  font-size: 8rem;
+  font-family: "Suburbia";
+  font-weight: 100;
+  z-index: 0;
+}
+
+.box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.box .rock-piece-1 {
+  position: absolute;
+  /* width: 50px; */
+  /* width: 20vw; */
+  filter: blur(3px);
+  right: 10px;
+  bottom: -220px;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-2 {
+  position: absolute;
+  /* width: 50px; */
+  /* width: 20vw; */
+  filter: blur(3px);
+  left: 30px;
+  bottom: -40px;
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-3 {
+  position: absolute;
+  /* width: 20px; */
+  /* width: 20vw; */
+  filter: blur(3.5px);
+  left: 100px;
+  bottom: -50px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-4 {
+  position: absolute;
+  /* width: 30px; */
+  /* width: 20vw; */
+  filter: blur(1.1px);
+  left: 250px;
+  bottom: 100px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-5 {
+  position: absolute;
+  /* width: 30px; */
+  /* width: 20vw; */
+  filter: blur(1.1px);
+  right: 148px;
+  bottom: -10px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+/* second section */
+
+.box .big-rock-1 {
+  position: absolute;
+  bottom: -30px;
+  left: 100px;
+  width: 10vw;
+  rotate: -25deg;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-2 {
+  position: absolute;
+  bottom: -30px;
+  left: 400px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-3 {
+  position: absolute;
+  bottom: -30px;
+  left: 300px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-4 {
+  position: absolute;
+  bottom: -10px;
+  right: 100px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-5 {
+  position: absolute;
+  bottom: -30px;
+  left: 200px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-5 {
+  position: absolute;
+  bottom: -30px;
+  right: 50px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-6 {
+  position: absolute;
+  left: 25%;
+  bottom: -30px;
+  rotate: -45deg;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-7 {
+  position: absolute;
+  bottom: -30px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+.box .big-rock-8 {
+  position: absolute;
+  right: 30%;
+  bottom: -30px;
+  width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+  rotate: 52deg;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+}
+
+.title-japan {
+  font-family: "Noto Serif JP", serif;
+}
+.title-zenitsu {
+  font-family: "Osake";
+}
+
+.red {
+  position: relative;
+  background: url("./assets/red.png") no-repeat center center;
+  background-size: contain;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.logo {
+  width: 350px;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+video {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  position: relative;
+}
+footer .logo {
+  position: absolute;
+  z-index: 1;
+}
+video {
+  position: relative;
+  z-index: -1;
+}
+
+/* Cards style */
+
+.fade-section {
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  background-image: url("https://external-preview.redd.it/uFgDbEUhURbL7LiLdkckCKGkP95m5R0535z3c89bu9I.png?format=pjpg&auto=webp&s=0484f5905f240bf269fb20b92964669f70804848");
+  background-attachment: fixed;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+
+.fade-section::before,
+.fade-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height to control the fade size */
+  pointer-events: none; /* Ensure the fade does not interfere with content */
+  z-index: 1;
+}
+
+.fade-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+}
+
+.fade-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+}
+
+:root {
+  --cards: 2;
+  --cardHeight: 87vh;
+  --cardTopPadding: 1em;
+  --cardMargin: 4vw;
+}
+
+.container-custom {
+  padding-top: 5rem;
+}
+
+#cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+  margin: 0;
+  padding-bottom: 5rem;
+}
+
+.card-main {
+  position: sticky;
+  top: 15%;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 {
+  --index: 1;
+}
+#card2 {
+  --index: 2;
+}
+
+.red-card {
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: all 0.5s;
+}
+
+.avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  border: 2px black solid;
+}
+
+.row1 h1 {
+  position: relative;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+  font-size: calc(3rem + 2vw);
+}
+.row1 p {
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 1em;
+  font-size: calc(1rem + 0.4vw);
+  font-weight: 100;
+}
+.about {
+  padding: 10px;
+  font-weight: 500;
+  font-size: calc(0.7rem + 0.5vw);
+  color: white;
+}
+
+/* Custom Card Styles */
+.video-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: all 0.5s;
+}
+
+.video-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.mute-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: calc(5vw + 10px);
+  height: calc(5vw + 10px);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: background 0.3s ease, opacity 0.5s ease; /* Added transition for opacity */
+  opacity: 0.2;
+}
+
+.mute-toggle:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  gap: 15px;
+}
+
+.image img {
+  max-width: 180px;
+  border-bottom-left-radius: 25px;
+}
+
+.text {
+  color: black;
+  font-weight: 100;
+  font-family: "Bangers", system-ui;
+}
+
+.text p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: calc(1rem + 0.4vw);
+}
+
+/* ///////////////////////////////////////////////   Media Queries */
+@media (max-width: 380px) {
+}
+
+@media (min-width: 380px) and (max-width: 480px) {
+}
+@media (max-width: 480px) {
+  .title-zenitsu,
+  .title-japan {
+    font-size: 20vw;
+  }
+
+  .box .rock-piece-1 {
+    width: 13vw;
+  }
+  .box .rock-piece-2 {
+    width: 11vw;
+  }
+  .box .rock-piece-3 {
+    width: 19vw;
+  }
+  .box .rock-piece-4 {
+    width: 10vw;
+  }
+  .box .rock-piece-5 {
+    width: 8vw;
+  }
+
+  /* Big rocks */
+  .box .big-rock-1 {
+    width: 15vw;
+    bottom: -20px;
+  }
+  .box .big-rock-2 {
+    width: 15vw;
+    left: 60%;
+    rotate: 35deg;
+  }
+  .box .big-rock-3 {
+    width: 15vw;
+  }
+  .box .big-rock-4 {
+    width: 15vw;
+  }
+  .box .big-rock-5 {
+    width: 15vw;
+    left: 30%;
+  }
+  .box .big-rock-6 {
+    width: 15vw;
+  }
+  .box .big-rock-7 {
+    width: 15vw;
+  }
+
+  /* Big rocks */
+
+  .zenitsu h1 {
+    font-size: 18vw;
+  }
+
+  footer .logo {
+    top: 40px;
+  }
+
+  .video {
+    padding: 10px 10px 0 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  /* Cards */
+}
+
+@media (max-width: 768px) {
+  .box {
+    margin: 3rem;
+  }
+
+  footer {
+    padding-top: 5rem;
+  }
+
+  .logo {
+    width: 250px;
+    margin: auto;
+  }
+
+  .fire {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .fade-section {
+    background-image: url("https://wallpapercave.com/wp/wp8327049.jpg");
+    max-width: 100vw;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container-custom {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .box {
+    margin: 5rem;
+  }
+  .box {
+    width: 80%;
+  }
+  .container-custom {
+    padding-bottom: 4rem;
+  }
+  .red-card {
+    padding: 4rem 0;
+  }
+  .about {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 991px) {
+  .box .rock-piece-1 {
+    width: 9vw;
+  }
+  .box .rock-piece-2 {
+    width: 11vw;
+  }
+  .box .rock-piece-3 {
+    width: 15vw;
+  }
+  .box .rock-piece-4 {
+    width: 8vw;
+  }
+  .box .rock-piece-5 {
+    width: 5vw;
+  }
+  .title-zenitsu,
+  .title-japan {
+    font-size: 6em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .box .rock-piece-1 {
+    width: 5vw;
+  }
+  .box .rock-piece-2 {
+    width: 10vw;
+  }
+  .box .rock-piece-3 {
+    width: 10vw;
+  }
+  .box .rock-piece-4 {
+    width: 7vw;
+    right: 0;
+    position: absolute;
+  }
+  .box .rock-piece-5 {
+    width: 4vw;
+  }
+  .title-zenitsu,
+  .title-japan {
+    font-size: 8em;
+  }
+  .logo {
+    width: 500px;
+  }
+  .box .rock-piece-3 {
+    left: 30%;
+  }
+  .fire {
+    height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .box .big-rock-2 {
+    left: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .box .big-rock-5 {
+    left: 30%;
+  }
+}
